@@ -1,6 +1,7 @@
 import React from 'react'
+import UnderMaintence from './UnderMaintence'
 export default function BootsList() {
     return (
-        <div>Currently under maintence. Try navigating to snowboards or about us.</div>
+        <UnderMaintence></UnderMaintence>
     )
 }

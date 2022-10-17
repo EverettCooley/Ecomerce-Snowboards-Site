@@ -87,7 +87,6 @@
 }
 
 .snowboard-tile:hover {
-    /* make light blue box-shadow */
     box-shadow: 0 0 0 3px hsl(231, 90%, 90%);
     cursor: pointer;
 }
@@ -175,7 +174,6 @@
     padding: 5px;
 }
 
-/* CSS */
 .button-9 {
   background-color: hsl(231, 90%, 61%);
   border-radius: 6px;
@@ -199,3 +197,36 @@
     padding: 20px;
     background-color: #f1f1f1;
 }
+
+
+.cut-text {
+    position: relative;
+    text-transform: uppercase;
+    background-image: linear-gradient(to left, #42b9f5, #425df5);
+    color: transparent;
+    background-clip: text;
+    -webkit-background-clip: text;
+}
+
+.sign-up:hover {
+    background-color: hsl(231, 90%, 71%);
+}
+
+.sign-up{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 5px 20px;
+    margin-right: 5%;
+    padding: 5px 20px;
+    background-color: hsl(231, 90%, 61%);
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+}
+
+.maintence {
+    margin: 30px;
+}
+

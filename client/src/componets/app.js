@@ -7,6 +7,7 @@ import '../css/app.css'
 import BindingsList from './BindingsList.jsx';
 import BootsList from './BootsList.jsx';
 import SnowboardDetails from './SnowboardDetails.jsx';
+import SignUp from './SignUp.jsx';
 import Header from './Header.jsx';
 import { SnowboardsContextProvider } from "../context/SnowboardsContext.jsx";
 
@@ -22,6 +23,7 @@ function App() {
                     <Route path="/boots" element={<BindingsList/>}/>
                     <Route path="/bindings" element={<BootsList/>}/>
                     <Route path="snowboards/:id" element={<SnowboardDetails/>}/>
+                    <Route path="/signUp" element={<SignUp/>}/>
                 </Routes>
             </Router>
         </SnowboardsContextProvider>
