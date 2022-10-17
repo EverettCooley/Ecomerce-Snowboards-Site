@@ -1,11 +1,13 @@
 import React from 'react'
 import SnowboardsList from './SnowboardsList.jsx';
+import NavBar from './NavBar.jsx';
 import '../css/app.css'
 
 function App() {
     return (
         <>
             {/* <div>Hello</div> */}
+            <NavBar/>
             <SnowboardsList snowboards={snowboards}/>
         </>
     )
