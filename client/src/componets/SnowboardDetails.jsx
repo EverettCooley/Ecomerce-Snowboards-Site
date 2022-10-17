@@ -1,7 +1,9 @@
-import React from 'react'
 import { useParams } from 'react-router-dom'
+import { SnowboardsContext } from "../context/SnowboardsContext.jsx";
+import React, {useState, useEffect, useContext} from 'react'
 
-export default function SnowboardDetails({snowboards}) {
+export default function SnowboardDetails() {
+    const {snowboards, setSnowboards} = useContext(SnowboardsContext)
     const {id} = useParams();
     const snowboard = snowboards.find(snowboard => snowboard.id === parseInt(id));
     return (
@@ -18,7 +20,7 @@ export default function SnowboardDetails({snowboards}) {
             <div className='right-side-details'>
                 <div className='snowboard-detail snowboard-details-name'>{"Name: " + snowboard.name}</div>
                 <div className='snowboard-detail snowboard-details-price'>{"price: $" + snowboard.price}</div>
-                <div className='snowboard-detail snowboard-details-brand'>{"Brand Name: " + snowboard.brand}</div>
+                {/* <div className='snowboard-detail snowboard-details-brand'>{"Brand Name: " + snowboard.brand}</div> */}
                 <div className='snowboard-detail snowboard-details-stars'>{"Number of stars: " + snowboard.stars}</div>
                 <button className='button-9'>Buy now</button>
             </div>

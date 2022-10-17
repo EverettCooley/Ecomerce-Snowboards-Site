@@ -8,21 +8,23 @@ import BindingsList from './BindingsList.jsx';
 import BootsList from './BootsList.jsx';
 import SnowboardDetails from './SnowboardDetails.jsx';
 import Header from './Header.jsx';
-
+import { SnowboardsContextProvider } from "../context/SnowboardsContext.jsx";
 
 function App() {
     return (
-        <Router>
-            <Header/>
-            <NavBar/>
-            <Routes>
-                <Route path="/" element={<SnowboardsList snowboards={snowboards}/>}/>
-                <Route path="/about" element={<AboutUs/>}/>
-                <Route path="/boots" element={<BindingsList/>}/>
-                <Route path="/bindings" element={<BootsList/>}/>
-                <Route path="snowboards/:id" element={<SnowboardDetails snowboards={snowboards}/>}/>
-            </Routes>
-        </Router>
+        <SnowboardsContextProvider>
+            <Router>
+                <Header/>
+                <NavBar/>
+                <Routes>
+                    <Route path="/" element={<SnowboardsList/>}/>
+                    <Route path="/about" element={<AboutUs/>}/>
+                    <Route path="/boots" element={<BindingsList/>}/>
+                    <Route path="/bindings" element={<BootsList/>}/>
+                    <Route path="snowboards/:id" element={<SnowboardDetails/>}/>
+                </Routes>
+            </Router>
+        </SnowboardsContextProvider>
     )
 }
 
