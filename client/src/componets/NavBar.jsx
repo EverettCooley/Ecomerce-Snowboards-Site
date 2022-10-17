@@ -1,17 +1,24 @@
 import React from 'react'
+import {Link} from 'react-router-dom';
 
-export default function NavBar() {
+export default function NavBar({setSearchTerm}) {
+
+  function handleSearchTermChange(e) {
+    setSearchTerm(e.target.value);
+    console.log(e.target.value);
+  }
+
   return (
-    <div className='nav'>
-        <div className='nav-items'>
-            <div className='nav-item'>Home</div>
-            <div className='nav-item'>Snowboards</div>
-            <div className='nav-item'>Boots</div>
-            <div className='nav-item'>Bindings</div>
-        </div>
+    <nav className='nav'>
+        <ul className='nav-items'>
+            <li className='nav-item'><Link className='link' to='/'>Snowboards</Link></li>
+            <li className='nav-item'><Link className='link' to='/bindings'>Bindings</Link></li>
+            <li className='nav-item'><Link className='link' to='/boots'>Boots</Link></li>
+            <li className='nav-item'><Link className='link' to='/about'>About Us</Link></li>
+        </ul>
         <div className='nav-search-container'>
-            <input className='nav-search' type="text" placeholder="Search"></input>
+            <input className='nav-search' type="text" placeholder="Search" onChange={handleSearchTermChange}></input>
         </div>
-    </div>
+    </nav>
   )
 }
