@@ -1,8 +1,6 @@
 import React, {useState} from 'react'
 import SnowboardTile from './SnowboardTile.jsx';
 
-<<<<<<< HEAD
-
 export default function SnowboardsList({snowboards}) {
     const [searchTerm, setSearchTerm] = useState('');
 
@@ -27,20 +25,6 @@ export default function SnowboardsList({snowboards}) {
                     <SnowboardTile key={snowboard.id} snowboard={snowboard}/>
                 ))}
             </div>
-=======
-export default function SnowboardsList({searchTerm, snowboards}) {
-    console.log(snowboards);
-    return (
-        <div className="snowboards-list">
-            {snowboards.filter(item => {
-                if (searchTerm === ""){ return item}
-                else if (item.name.toLowerCase().includes(searchTerm.toLowerCase())){ 
-                    return item}
-                }
-                ).map(snowboard => (
-                <SnowboardTile key={snowboard.id} snowboard={snowboard}/>
-            ))}
->>>>>>> cad3e0d518a7e6dd5bf31c6fabdb7dd0db0fa8a0
         </div>
 
     )
