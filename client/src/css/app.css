@@ -4,14 +4,17 @@
     box-sizing: border-box;
     margin: 0px;
     padding: 0px;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 .snowboard-tile {
     width: 25%;
     margin: 5px;
-    border: 1px solid #ccc;
     border-radius: 5px;
-    background-color: #ccc;;
+    background-color: #ccc;
+    border: 1px solid #ccc;
+    text-decoration: none;
+    color: black;
 }
 
 .snowboard-img {
@@ -36,11 +39,16 @@
 }
 
 .nav {
-    background-color: hsl(210, 9%, 91%);
+    background-color: #333;
     display: flex;
     justify-content: space-between;
 }
 
+.sticky {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+}
 .nav-items {
     display: flex;
     justify-content: left;
@@ -49,18 +57,26 @@
 }
 
 .nav-item:hover {
-    background-color: hsl(210, 9%, 70%);
+    background-color: hsl(231, 90%, 61%);
 }
 
 .nav-search-container {
     display: flex;
-    justify-content: right;
-    padding: 0px 25px;
+    justify-content: center;
+    padding: 10px 25px;
 }
 
 .nav-item {
     padding: 15px 20px;
     cursor: pointer;
+}
+
+.nav-search {
+    padding: 10px 20px;
+    margin-top: 15fpx;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
 }
 
 
@@ -72,7 +88,7 @@
 
 .snowboard-tile:hover {
     /* make light blue box-shadow */
-    box-shadow: 0 0 0 3px #ADD8E6;
+    box-shadow: 0 0 0 3px hsl(231, 90%, 90%);
     cursor: pointer;
 }
 
@@ -85,7 +101,8 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    margin-top: 15px;
+    margin-top: 0px;
+    background-color: white;
 }
 
 .about-us-container {
@@ -110,6 +127,75 @@
 
 .link {
     text-decoration: none;
-    color: black;
+    color: white;
 }
 
+.snowboard-details-img {
+    width: 100%;
+}
+
+.left-side-details {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+}
+
+.snowboard-details-sizes-list {
+    display: flex;
+    justify-content: center;
+}
+
+.snowboard-details-size {
+    margin: 5px;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
+}
+
+.snowboard-details-sizes-title {
+    margin: 15px;
+    font-size: 1.2em;
+}
+
+.snowboard-details-container {
+    display: flex;
+    justify-content: left;
+    margin-top: 15px;
+    
+}
+
+.right-side-details {
+    display: flex;
+    flex-direction: column;
+    padding-top: 4%;
+    width: 70%;
+}
+.snowboard-detail {
+    padding: 5px;
+}
+
+/* CSS */
+.button-9 {
+  background-color: hsl(231, 90%, 61%);
+  border-radius: 6px;
+  border-width: 0;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+  width: 10%;
+  font-size: 1.5em;
+  margin: 20px 0px;
+}
+
+.button-9:hover {
+    background-color: hsl(231, 90%, 71%);
+  
+}
+
+.header-container {
+    display: flex;
+    justify-content: center;
+    padding: 20px;
+    background-color: #f1f1f1;
+}

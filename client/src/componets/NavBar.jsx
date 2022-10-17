@@ -1,24 +1,30 @@
-import React from 'react'
+import React, {useState, useEffect} from 'react'
 import {Link} from 'react-router-dom';
 
-export default function NavBar({setSearchTerm}) {
+export default function NavBar() {
+    const [sticky, setSticky] = useState(false);
 
-  function handleSearchTermChange(e) {
-    setSearchTerm(e.target.value);
-    console.log(e.target.value);
-  }
+    useEffect(() => {
+        window.addEventListener('scroll', () => {
+            console.log(window.scrollY);
+            if (window.scrollY > 75) {
+                setSticky(true);
+            } else {
+                setSticky(false);
+            }
+        });
+    }, []);
 
-  return (
-    <nav className='nav'>
-        <ul className='nav-items'>
-            <li className='nav-item'><Link className='link' to='/'>Snowboards</Link></li>
-            <li className='nav-item'><Link className='link' to='/bindings'>Bindings</Link></li>
-            <li className='nav-item'><Link className='link' to='/boots'>Boots</Link></li>
-            <li className='nav-item'><Link className='link' to='/about'>About Us</Link></li>
-        </ul>
-        <div className='nav-search-container'>
-            <input className='nav-search' type="text" placeholder="Search" onChange={handleSearchTermChange}></input>
+    return (
+        <div className={sticky ? 'sticky' : ''}>
+            <nav className='nav'>
+                <ul className='nav-items'>
+                    <li className='nav-item'><Link className='link' to='/'>Snowboards</Link></li>
+                    <li className='nav-item'><Link className='link' to='/bindings'>Bindings</Link></li>
+                    <li className='nav-item'><Link className='link' to='/boots'>Boots</Link></li>
+                    <li className='nav-item'><Link className='link' to='/about'>About Us</Link></li>
+                </ul>
+            </nav>
         </div>
-    </nav>
-  )
+    )
 }
