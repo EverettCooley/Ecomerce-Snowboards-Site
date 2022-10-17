@@ -5,7 +5,7 @@ export default function SnowboardTile({snowboard}) {
         <div className="snowboard-tile">
             <div className='tile-body'>
                 {/* <div className='tile-new'>NEW</div> */}
-                <img className="snowboard-img" src={snowboard.image} alt="No image"></img>
+                <img className="snowboard-img" src={snowboard.image} alt="Not Found"></img>
             </div>
             <div className='tile-footer'>
                 <div className='tile-footer-item'>{snowboard.name}</div>
