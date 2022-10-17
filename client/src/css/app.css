@@ -62,8 +62,13 @@
 
 .nav-search-container {
     display: flex;
+<<<<<<< HEAD
     justify-content: center;
     padding: 10px 25px;
+=======
+    justify-content: right;
+    padding: 0px 25px;
+>>>>>>> cad3e0d518a7e6dd5bf31c6fabdb7dd0db0fa8a0
 }
 
 .nav-item {
@@ -101,8 +106,12 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+<<<<<<< HEAD
     margin-top: 0px;
     background-color: white;
+=======
+    margin-top: 15px;
+>>>>>>> cad3e0d518a7e6dd5bf31c6fabdb7dd0db0fa8a0
 }
 
 .about-us-container {
@@ -127,6 +136,7 @@
 
 .link {
     text-decoration: none;
+<<<<<<< HEAD
     color: white;
 }
 
@@ -199,3 +209,8 @@
     padding: 20px;
     background-color: #f1f1f1;
 }
+=======
+    color: black;
+}
+
+>>>>>>> cad3e0d518a7e6dd5bf31c6fabdb7dd0db0fa8a0
