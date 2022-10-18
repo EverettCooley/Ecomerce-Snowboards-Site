@@ -230,3 +230,9 @@
     margin: 30px;
 }
 
+.watermark {
+    position:absolute;
+    color: #999;
+    margin: 2px
+}
+
