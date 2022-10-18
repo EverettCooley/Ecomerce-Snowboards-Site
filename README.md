@@ -6,8 +6,8 @@ An ecommerce snowboarding website that that aggeragates multiple snowboarding re
 ## Usage
 Navigate to the server folder and and run "npm install".
 
-Then run "npx nodemon server.js" to start the server listening at localhost:3001.
+Then run "npx nodemon server.js" to start the server listening at localhost:4001.
 
 Navigate to the client folder and run "npm install".
 
-Then run "npm start" and you will then have a client running at localhost:3000.
+Then run "npm start" and you will then have a client running at localhost:4000.
