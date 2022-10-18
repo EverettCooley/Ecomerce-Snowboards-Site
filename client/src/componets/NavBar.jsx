@@ -19,10 +19,10 @@ export default function NavBar() {
         <div className={sticky ? 'sticky' : ''}>
             <nav className='nav'>
                 <ul className='nav-items'>
-                    <li className='nav-item'><Link className='link' to='/'>Snowboards</Link></li>
-                    <li className='nav-item'><Link className='link' to='/bindings'>Bindings</Link></li>
-                    <li className='nav-item'><Link className='link' to='/boots'>Boots</Link></li>
-                    <li className='nav-item'><Link className='link' to='/about'>About Us</Link></li>
+                    <Link className='link nav-item' to='/'>Snowboards</Link>
+                    <Link className='link nav-item' to='/bindings'>Bindings</Link>
+                    <Link className='link nav-item' to='/boots'>Boots</Link>
+                    <Link className='link nav-item' to='/about'>About Us</Link>
                 </ul>
                 <Link className='sign-up' to='/signUp'>
                     <span className='sign-up-text'>Sign Up</span>
