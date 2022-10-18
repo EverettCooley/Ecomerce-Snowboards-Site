@@ -19,7 +19,7 @@ app.get("/api/snowboards", async (req, res) => {
     }
 });
 
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 4001;
 app.listen(port, () => {
     console.log("server has started");
 });
